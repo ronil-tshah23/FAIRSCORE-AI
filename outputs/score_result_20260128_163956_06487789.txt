@@ -1,0 +1,11 @@
+FAIRSCORE Analysis Result
+==================================================
+
+FAIR-SCORE: 645
+Category: FAIR
+
+Component Scores:
+  Income Stability (Is): 64.00%
+  Expense Discipline (Bs): 55.60%
+  Liquidity Buffer (Ls): 38.95%
+  Risk Anomaly (Rf): 12.00%

@@ -1,0 +1,81 @@
+{
+  "income_stability": {
+    "model_name": "Income Stability (Is)",
+    "algorithm": "LightGBM",
+    "auc_score": 0.9998004608903346,
+    "accuracy": 0.9935,
+    "best_iteration": 88,
+    "feature_importance": {
+      "is_income_regularity": 34398.75757718086,
+      "is_income_variance": 6104.12593665719,
+      "is_income_frequency": 14549.694523334503,
+      "is_salary_consistency": 51500.33387988806,
+      "is_income_growth": 3054.041354984045
+    }
+  },
+  "expense_discipline": {
+    "model_name": "Expense Discipline (Bs)",
+    "algorithm": "Random Forest",
+    "auc_score": 0.9958358958973974,
+    "accuracy": 0.962,
+    "n_estimators": 100,
+    "feature_importance": {
+      "bs_expense_variance": 0.23800148621379086,
+      "bs_essential_ratio": 0.25444930062173315,
+      "bs_discretionary_ratio": 0.09918799667022533,
+      "bs_recurring_rate": 0.11615534639558761,
+      "bs_budget_adherence": 0.2922058700986629
+    }
+  },
+  "liquidity_buffer": {
+    "model_name": "Liquidity & Buffer (Ls)",
+    "algorithm": "Logistic Regression",
+    "auc_score": 0.9999899814757487,
+    "accuracy": 0.9975,
+    "feature_coefficients": {
+      "ls_savings_ratio": 0.0,
+      "ls_avg_balance_ratio": 8.75355416509378,
+      "ls_min_balance_rate": 0.0,
+      "ls_emergency_fund": 0.8341650293910998,
+      "ls_balance_volatility": 15.308792494523562
+    },
+    "feature_importance": {
+      "ls_savings_ratio": 0.0,
+      "ls_avg_balance_ratio": 8.75355416509378,
+      "ls_min_balance_rate": 0.0,
+      "ls_emergency_fund": 0.8341650293910998,
+      "ls_balance_volatility": 15.308792494523562
+    }
+  },
+  "risk_anomaly": {
+    "model_name": "Risk & Anomaly (Rf)",
+    "algorithm": "Isolation Forest",
+    "total_samples": 10000,
+    "anomalies_detected": 1000,
+    "anomaly_rate": 0.1,
+    "contamination_param": 0.1,
+    "score_mean": 0.07600931806563356,
+    "score_std": 0.06071487179528601,
+    "feature_importance": {
+      "rf_overdraft_count": 0.542735318000568,
+      "rf_large_txn_ratio": 0.20478638278982128,
+      "rf_irregular_time": 0.41716025536293877,
+      "rf_category_entropy": 0.33702200583621356,
+      "rf_spike_score": 0.3264940818634884
+    }
+  },
+  "score_statistics": {
+    "mean": 615.3444,
+    "std": 154.30986210218126,
+    "min": 302,
+    "max": 897,
+    "median": 617.5,
+    "category_distribution": {
+      "FAIR": 3227,
+      "GOOD": 3151,
+      "POOR": 2014,
+      "EXCELLENT": 1608
+    }
+  },
+  "training_timestamp": "2026-01-28T16:22:05.164198"
+}
