@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fairscore-ai"
+version = "1.0.0"
+description = "Fair and Explainable AI Credit Scoring Terminal Application"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{name = "Aman Dharod, Ronil Shah, Krish Jain, Varad Walunje"}]
+keywords = [
+    "credit-scoring",
+    "explainable-ai",
+    "fairness",
+    "machine-learning",
+    "terminal-ui",
+    "financial-inclusion",
+    "shap",
+    "tui",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "textual>=0.47.0",
+    "rich>=13.7.0",
+    "lightgbm>=4.0.0",
+    "scikit-learn>=1.4.0",
+    "shap>=0.44.0",
+    "faker>=22.0.0",
+    "numpy>=1.26.0",
+    "pandas>=2.1.0",
+    "matplotlib>=3.8.0",
+    "google-generativeai>=0.3.0",
+    "fpdf2>=2.7.0",
+    "joblib>=1.3.0",
+    "PyMuPDF>=1.23.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+]
+
+[project.scripts]
+fairscore = "fairscore.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/fairscore/fairscore"
+Documentation = "https://github.com/fairscore/fairscore#readme"
+Repository = "https://github.com/fairscore/fairscore"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["fairscore*", "models"]
+
+[tool.setuptools.package-data]
+fairscore = ["*.tcss"]
+"*" = ["models/*.pkl"]
+
+[tool.setuptools.data-files]
+"share/fairscore/models" = [
+    "models/expense_discipline_model.pkl",
+    "models/income_stability_model.pkl",
+    "models/liquidity_buffer_model.pkl",
+    "models/liquidity_buffer_scaler.pkl",
+    "models/risk_anomaly_model.pkl",
+    "models/risk_anomaly_scaler.pkl",
+]

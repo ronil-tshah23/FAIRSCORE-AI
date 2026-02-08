@@ -1,0 +1,11 @@
+# Include model files for PyPI distribution
+include models/*.pkl
+
+# Include package data
+include fairscore/*.tcss
+
+# Include documentation
+include README.md
+include LICENSE
+include CONTRIBUTING.md
+include SECURITY.md
